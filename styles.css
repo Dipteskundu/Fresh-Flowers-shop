@@ -1,66 +1,195 @@
-*{
-    margin: 0px;
-    padding: 0px; 
-}
-/****************shared style***************** */
-
-.margin{
-    margin: 20px 50px;
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* header section */
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f6fb;
 }
 
-nav img{
-width: 15%;
-margin: 0px;
-
-
-}
-.navbar ul{
-    
-}
-.no-bullets{
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-}
-.navbar ul li{
-    list-style-type: none;
-
-}
-a{
+a {
     text-decoration: none;
     color: black;
 }
 
-/* hero  section */
-.hero-container{
-    display: flex;
+/* Utility class */
+.margin {
+    margin: 20px 50px;
 
 }
-.hero-flower{
+
+/* Header styles */
+nav {
+    display: flex;
     align-items: center;
-    justify-content: flex-start;   
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
-.fresh{
+
+nav img {
+    width: 150px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+
+    gap: 30px;
+}
+
+.navbar ul li {
+    list-style: none;
+}
+
+.navbar a:hover {
+    color: #E95A08;
+}
+
+/* Hero Section */
+.hero-container {
+    display: flex;
+
+    
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.hero-flower {
+    flex: 1;
+    min-width: 280px;
+}
+
+.hero-container img {
+    flex: 1;
+    max-width: 500px;
+}
+
+.fresh {
     color: #E95A08;
     font-size: 45px;
 }
-h1{
+
+h1 {
     font-size: 45px;
 }
 
-p{
+p {
     font-size: 22px;
-    color: #000000;
+    color: #000;
 }
-img{
-    width: 50%;
+
+/* About Plants */
+.about-plants {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.about-plants h1 {
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+/* Card Grid Layout */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+/* Individual Card */
+.card {
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.card h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #111111;
+}
+
+.card h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.btn {
+    background-color: #E95A08;
+    color: white;
+    padding: 10px 65px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 2px;
+   
+  
+}
+
+.btn:hover {
+    background-color: #1acd8b;
+}
+
+.card .btn a {
+    color: white;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .margin {
+        margin: 15px 25px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    nav img {
+        width: 120px;
+    }
+
+    .navbar ul {
+        justify-content: center;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-flower {
+        order: 1;
+    }
+
+    .hero-container img {
+        order: 2;
+    }
+
+    h1,
+    .fresh {
+        font-size: 35px;
+    }
+
+    p {
+        font-size: 18px;
+    }
 }
