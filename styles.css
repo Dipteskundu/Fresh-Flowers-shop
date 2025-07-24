@@ -38,10 +38,8 @@ nav img {
     display: flex;
 
     gap: 30px;
-}
+    
 
-.navbar ul li {
-    list-style: none;
 }
 
 .navbar a:hover {
@@ -52,7 +50,7 @@ nav img {
 .hero-container {
     display: flex;
 
-    
+
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -110,12 +108,18 @@ p {
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
     margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card img {
     width: 100%;
     height: auto;
     margin-bottom: 10px;
+    border-radius: 6px;
 }
 
 .card h4 {
@@ -130,40 +134,48 @@ p {
     margin-bottom: 15px;
 }
 
+/* Fixed Button Style */
 .btn {
     background-color: #E95A08;
     color: white;
-    padding: 10px 74px;
+    padding: 12px;
     border: none;
     font-weight: bold;
     cursor: pointer;
-    border-radius: 2px;
-   
-  
-}
-
-.btn:hover {
-    background-color: #1acd8b;
+    border-radius: 4px;
+    width: 100%;
+    display: block;
+    font-size: 14px;
+    text-align: center;
+    transition: background-color 0.3s ease;
 }
 
 .card .btn a {
     color: white;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
-/* plants section */
-.flower-store{
+.btn:hover {
+    background-color: #d94c0a;
+}
+
+/* Flower store section */
+.flower-store {
     display: flex;
     align-items: end;
     justify-content: center;
     gap: 30px;
 }
 
-.flower-store img{
+.flower-store img {
     width: 100%;
     height: 500px;
 }
 
-.info li{
+.info li {
     font-size: 20px;
     margin-left: 20px;
     margin-top: 10px;
@@ -193,6 +205,8 @@ p {
     .hero-container {
         flex-direction: column;
         text-align: center;
+        justify-content: center;
+        align-items: center;
         gap: 30px;
     }
 
@@ -211,5 +225,33 @@ p {
 
     p {
         font-size: 18px;
+    }
+
+    .flower-store {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .flower-store img {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+        object-fit: cover;
+    }
+
+    .flower-store-details {
+        padding: 20px;
+    }
+
+    .flower-store-details h1 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .info li {
+        font-size: 16px;
+        margin: 10px 0;
+        line-height: 1.5;
     }
 }
