@@ -1,4 +1,4 @@
-/* CSS styles For the page */
+/* CSS style For the page */
 * {
     margin: 0;
     padding: 0;
@@ -50,7 +50,6 @@ nav img {
 /* Hero Section */
 .hero-container {
     display: flex;
-
 
     align-items: center;
     justify-content: space-between;
@@ -171,11 +170,24 @@ p {
     gap: 30px;
 }
 
-.flower-store img {
-    width: 100%;
-    height: 500px;
+.image-container {
+    position: relative;
+    display: inline-block;
 }
 
+.main-image {
+    display: block;
+    width: 400px;
+    height: 450px;
+}
+
+.overlay-image {
+    position: absolute;
+    top: -90px;
+    left: 300px;
+    width: 200px;
+    height: auto;
+}
 
 .info li {
     font-size: 20px;
@@ -354,6 +366,58 @@ input {
     text-decoration: none;
 }
 
+/*   FOOTER  */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 60px 50px;
+    background-color: #fff;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-discription {
+    flex: 1 1 300px;
+}
+
+.footer-discription img {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-discription p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.footer-nav {
+    flex: 1 1 200px;
+}
+
+.footer-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-nav ul li {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.logo {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex: 1 1 200px;
+}
+
+.logo img {
+    width: 30px;
+    height: 30px;
+}
+
 
 
 
@@ -365,7 +429,7 @@ input {
 
     nav {
         flex-direction: row !important;
-        /* Keep horizontal layout */
+
         justify-content: space-between;
         align-items: center;
         padding: 10px 0;
@@ -400,11 +464,13 @@ input {
         order: 1;
         max-width: 100%;
         width: 100%;
+        text-align: right;
+        margin-left: 38%;
     }
 
     .hero-flower {
         order: 2;
-        text-align: center;
+        text-align: left;
         min-width: auto;
     }
 
@@ -423,6 +489,7 @@ input {
     p {
         font-size: 16px;
         line-height: 1.5;
+        margin: 0;
     }
 
     .about-plants {
@@ -446,11 +513,11 @@ input {
         height: auto;
         max-height: 300px;
         object-fit: cover;
-    }  
-    /* .overlay-image hide  */
+    }
+
     .overlay-image {
-    display: none;
-}
+        display: none;
+    }
 
     .flower-store-details {
         padding: 20px;
@@ -482,7 +549,7 @@ input {
         line-height: 1.5;
     }
 
-    /* working tree */
+
     .plant-offers-section {
         margin: 0px 20px;
         padding: 40px 0;
@@ -518,7 +585,8 @@ input {
         font-size: 24px;
         padding-bottom: 20px;
     }
-        /* footer section */
+
+    /* footer */
     footer {
         flex-direction: column;
         gap: 0;
@@ -546,6 +614,7 @@ input {
     .footer-nav {
         width: 100%;
         margin: 0;
+        margin-top: -0px;
     }
 
     .footer-nav ul li {
@@ -564,71 +633,82 @@ input {
     .logo img {
         width: 40px;
         height: 40px;
-        margin-top: 10px;
+        margin-top: -100px;
     }
 }
 
+
+
 @media screen and (max-width: 480px) {
-            .margin {
-                margin: 10px 15px;
-            }
+    .margin {
+        margin: 10px 15px;
+    }
 
-            .card-grid {
-                grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-                gap: 10px;
-            }
+    .card-grid {
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        gap: 10px;
+    }
 
-            .hero-container img {
-                max-width: 280px;
-            }
+    .hero-container img {
+        order: 1;
+        max-width: 100%;
+        width: 100%;
+        text-align: right;
+        margin-left: 5%;
+    }
 
-            h1, .fresh {
-                font-size: 24px;
-            }
+    h1,
+    .fresh {
+        font-size: 24px;
+    }
 
-            p {
-                font-size: 14px;
-            }
+    p {
+        font-size: 14px;
+    }
 
-            .about-plants h1 {
-                font-size: 22px;
-            }
+    .about-plants h1 {
+        font-size: 22px;
+    }
 
-            .bloom-offer,
-            .ana-offer,
-            .zabo-offer {
-                height: 180px;
-            }
+    .bloom-offer,
+    .ana-offer,
+    .zabo-offer {
+        height: 180px;
+    }
 
-            .offer-discount {
-                font-size: 20px;
-            }
+    .offer-discount {
+        font-size: 20px;
+    }
 
-            .offer-plant-name {
-                font-size: 16px;
-            }
+    .offer-plant-name {
+        font-size: 16px;
+    }
 
-            .search-product h1 {
-                font-size: 20px;
-            }
-        }
+    .search-product h1 {
+        font-size: 20px;
+    }
+}
 
-        /* iPhone X and similar devices */
-        @media screen and (max-width: 375px) {
-            .margin {
-                margin: 10px 12px;
-            }
+/* iPhone X and similar devices */
+@media screen and (max-width: 375px) {
+    .margin {
+        margin: 10px 12px;
+    }
 
-            nav img {
-                width: 80px;
-            }
+    nav img {
+        width: 80px;
+    }
 
-            .card-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 8px;
-            }
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
 
-            .hero-container img {
-                max-width: 250px;
-            }
-        }
+    .hero-container img {
+        order: 1;
+        max-width: 100%;
+        width: 100%;
+        text-align: right;
+        margin-left: 5%;
+    }
+}
